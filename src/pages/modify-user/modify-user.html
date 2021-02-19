@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ModifyUserPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>ModifyUser</ion-title>
+    <ion-buttons end>
+    <button ion-button icon-only (click)="closeModal()">
+      <ion-icon item-right name="md-exit"></ion-icon>
+    </button>
+  </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+    <ion-list>
+      <ion-item>
+        <ion-input type="text" placeholder="Firstname" id="firstname" name="firstname" class="form-control" [(ngModel)]="user.first_name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="Lastname" id="lastname" name="lastname" class="form-control" [(ngModel)]="user.last_name" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="email" placeholder="Email" id="email" name="email" class="form-control" [(ngModel)]="user.email" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input type="text" placeholder="job" id="job" name="job" class="form-control" ngModel required></ion-input>
+      </ion-item>
+    </ion-list>
+      <button ion-button block round type="submit" [disabled]="f.invalid">Modify</button>
+  </form>
+  <button ion-button block round (click)="closeModal()" color="danger">Cancel</button>
+</ion-content>

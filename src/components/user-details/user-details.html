@@ -1,0 +1,16 @@
+<div class="card-background-page">
+  <ion-card>
+    <img src={{avatar}}/>
+    <div class="card-title">{{first_name+" "+ last_name | uppercase}}</div>
+    <div class="card-subtitle">{{email}}</div>
+
+    <ion-fab top right>
+      <button ion-fab mini><ion-icon name="arrow-dropdown"></ion-icon></button>
+      <ion-fab-list>
+        <button ion-fab (click)="getDetails()" mini><ion-icon name="md-information-circle"></ion-icon></button>
+        <button ion-fab color="secondary" (click)="modify()" mini><ion-icon name="md-construct"></ion-icon></button>
+        <button ion-fab color="danger" (click)="removeUser()" mini><ion-icon name="md-pulse"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+  </ion-card>
+</div>
